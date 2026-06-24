@@ -65,8 +65,7 @@ async def main():
     @client.on(events.NewMessage(chats=SOURCE_CHANNEL))
     async def handler(event):
         global last_price
-        text = event.message.text or ""
-
+text = event.message.text or event.message.message or ""
         if "هەولێر" not in text:
             return
 
